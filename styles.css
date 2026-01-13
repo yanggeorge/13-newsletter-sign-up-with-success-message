@@ -53,4 +53,22 @@ body {
 
 body {
   background-color: var(--color-grey-200);
+}
+
+main {
+  display: flex;
+}
+
+.signup-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-success {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
