@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --color-white: hsl(0, 100%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-grey: hsl(0, 0%, 58%);
+  --color-grey-900: hsl(217, 19%, 35%);
+  --color-grey-500: hsl(214, 17%, 51%);
+  --color-grey-400: hsl(212, 23%, 69%);
+  --color-grey-200: hsl(210, 46%, 95%);
+  --color-blue-800: hsl(234, 29%, 20%);
+  --color-blue-700: hsl(235, 18%, 26%);
+  --color-red: hsl(4, 100%, 67%);
+  --text-preset1: 700 56px/100% "Roboto", sans-serif;
+  --text-preset1-mobile: 700 40px/100% "Roboto", sans-serif;
+  --text-preset2: 500 16px/150% "Roboto", sans-serif;
+  --text-preset2-bold: 700 16px/150% "Roboto", sans-serif;
+  --text-preset3: 700 12px/150% "Roboto", sans-serif;
+  --spacing-50: 0.25rem; /* 4px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-700: 3.5rem; /* 56px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-900: 4.5rem; /* 72px */
+  --spacing-1000: 5rem; /* 80px */
+  --spacing-1400: 7rem; /* 112px */
+  --spacing-1600: 8rem; /* 128px */
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0px;
+  background-color: var(--color-white);
+}
+
+body {
+  /* 如果不开启特定的抗锯齿设置，字体往往会显得略微发虚、变粗，视觉上就会觉得“宽”了 */
+  /* 针对 Chrome, Safari (Mac) */
+  -webkit-font-smoothing: antialiased;
+  /* 针对 Firefox (Mac) */
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  /* 这个强制居中不要用 */
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--color-grey-200);
+}/*# sourceMappingURL=styles.css.map */
