@@ -6,6 +6,7 @@ const emailInput = document.querySelector(".email-input");
 
 const validator = new JustValidate(formElement, {
   validateBeforeSubmitting: true, // 提交时验证
+  errorLabelStyle: {},
 });
 
 // 1. 定义字段规则
@@ -16,7 +17,7 @@ validator.addField(
     { rule: "email", errorMessage: "Valid email required" },
   ],
   {
-    errorsContainer: ".error-info", // 错误文字放哪里
+    errorsContainer: document.querySelector(".email.input-group .error-info"), // 错误文字放哪里
   }
 );
 
@@ -24,6 +25,7 @@ validator.addField(
 validator.onValidate(({ fields }) => {
   // fields 是一个对象，包含了所有注册字段的状态
   // 结构如: { ".email-input": { isValid: false, ... } }
+  console.log(fields);
 
   // 遍历所有字段
   for (const selector in fields) {
