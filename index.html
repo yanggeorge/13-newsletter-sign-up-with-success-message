@@ -32,8 +32,14 @@
 
         <form novalidate>
           <div class="email">
-            <label for="email">Email address</label>
-            <input type="text" placeholder="email@company.com">
+
+            <div class="message">
+              <label for="email">Email address</label>
+              <span class="error-info">Valid email
+                required</span>
+            </div>
+
+            <input class="email-input" type="text" placeholder="email@company.com">
           </div>
           <button class="submit" type="submit">
             Subscribe to monthly newsletter

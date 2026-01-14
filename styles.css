@@ -120,10 +120,22 @@ main {
   flex-direction: column;
   gap: 8px;
 }
+.signup-view .container form .email .message {
+  display: flex;
+  justify-content: space-between;
+}
 .signup-view .container form .email label {
   font: var(--text-preset3);
 }
-.signup-view .container form .email input {
+.signup-view .container form .email .error-info {
+  display: none;
+  font: var(--text-preset3);
+  color: var(--color-red);
+}
+.signup-view .container form .email.error .error-info {
+  display: flex;
+}
+.signup-view .container form .email .email-input {
   padding: 16px 24px;
   border: 1px solid var(--color-grey);
   border-radius: 8px;
@@ -131,15 +143,19 @@ main {
   color: var(--color-blue-800);
   caret-color: var(--color-blue-800);
 }
-.signup-view .container form .email input::-moz-placeholder {
+.signup-view .container form .email .email-input::-moz-placeholder {
   color: var(--color-grey);
 }
-.signup-view .container form .email input::placeholder {
+.signup-view .container form .email .email-input::placeholder {
   color: var(--color-grey);
 }
-.signup-view .container form .email input:focus {
+.signup-view .container form .email .email-input:focus {
   border: 1px solid var(--color-blue-800);
   outline: none;
+}
+.signup-view .container form .email.error .email-input {
+  color: var(--color-red);
+  border-color: var(--color-red);
 }
 .signup-view .container form .submit {
   padding: 16px 48px;
