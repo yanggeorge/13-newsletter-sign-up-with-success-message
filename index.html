@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
@@ -31,19 +32,16 @@
         </div>
 
         <form novalidate>
-          <div class="email">
-
+          <div class="email input-group">
             <div class="message">
               <label for="email">Email address</label>
-              <span class="error-info">Valid email
-                required</span>
+              <div class="error-info"></div>
             </div>
-
-            <input class="email-input" type="text" placeholder="email@company.com">
+            <input id="email" name="email" type="email" autocomplete="email" class="email-input" type="text"
+              placeholder="email@company.com">
           </div>
-          <button class="submit" type="submit">
-            Subscribe to monthly newsletter
-          </button>
+
+          <button class="submit" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </div>
