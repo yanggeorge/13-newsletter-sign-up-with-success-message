@@ -13,7 +13,7 @@
   --color-red: hsl(4, 100%, 67%);
   --text-preset1: 700 56px/100% "Roboto", sans-serif;
   --text-preset1-mobile: 700 40px/100% "Roboto", sans-serif;
-  --text-preset2: 500 16px/150% "Roboto", sans-serif;
+  --text-preset2: 400 16px/150% "Roboto", sans-serif;
   --text-preset2-bold: 700 16px/150% "Roboto", sans-serif;
   --text-preset3: 700 12px/150% "Roboto", sans-serif;
   --spacing-50: 0.25rem; /* 4px */
@@ -62,11 +62,91 @@ main {
 .signup-view {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.signup-view .header-img {
+  width: 375px;
+  height: 284px;
+}
+.signup-view .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.signup-view .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.signup-view .container .content .title {
+  font: var(--text-preset1-mobile);
+  color: var(--color-blue-800);
+}
+.signup-view .container .content .desc {
+  font: var(--text-preset2);
+  color: var(--color-blue-800);
+  width: 327px;
+}
+.signup-view .container .content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.signup-view .container .content li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 327px;
+  font: var(--text-preset2);
+}
+.signup-view .container .content li::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  background: url("/assets/images/icon-list.svg") no-repeat center center;
+  background-size: contain;
+  flex-shrink: 0;
 }
 
 .submit-success {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 623px;
+  width: 327px;
+  margin-top: 149px;
+  margin-bottom: 70px;
+}
+.submit-success .container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.submit-success .container img {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+.submit-success .container .title {
+  font: var(--text-preset1-mobile);
+  color: var(--color-blue-800);
+}
+.submit-success .container .detail {
+  font: var(--text-preset2);
+  color: var(--color-blue-800);
+}
+.submit-success .container .detail .email {
+  font: var(--text-preset2-bold);
+}
+.submit-success .dismiss {
+  width: 324px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: var(--color-blue-800);
+  color: var(--color-white);
+  font: var(--text-preset2-bold);
 }
 
 .hidden {

@@ -14,7 +14,7 @@
 
   --text-preset1: 700 56px/100% "Roboto", sans-serif;
   --text-preset1-mobile: 700 40px/100% "Roboto", sans-serif;
-  --text-preset2: 500 16px/150% "Roboto", sans-serif;
+  --text-preset2: 400 16px/150% "Roboto", sans-serif;
   --text-preset2-bold: 700 16px/150% "Roboto", sans-serif;
   --text-preset3: 700 12px/150% "Roboto", sans-serif;
 
@@ -67,11 +67,105 @@ main {
 .signup-view {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  .header-img {
+    width: 375px;
+    height: 284px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .title {
+        font: var(--text-preset1-mobile);
+        color: var(--color-blue-800);
+      }
+
+      .desc {
+        font: var(--text-preset2);
+        color: var(--color-blue-800);
+        width: 327px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        width: 327px;
+        font: var(--text-preset2);
+      }
+
+      li::before {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 21px;
+        background: url("/assets/images/icon-list.svg") no-repeat center center;
+        background-size: contain;
+        flex-shrink: 0;
+      }
+    }
+  }
 }
 
 .submit-success {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 623px;
+  width: 327px;
+  margin-top: 149px;
+  margin-bottom: 70px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    img {
+      width: 64px;
+      height: 64px;
+      display: block;
+    }
+
+    .title {
+      font: var(--text-preset1-mobile);
+      color: var(--color-blue-800);
+    }
+
+    .detail {
+      font: var(--text-preset2);
+      color: var(--color-blue-800);
+
+      .email {
+        font: var(--text-preset2-bold);
+      }
+    }
+  }
+
+  .dismiss {
+    width: 324px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: var(--color-blue-800);
+    color: var(--color-white);
+    font: var(--text-preset2-bold);
+  }
 }
 
 .hidden {
