@@ -67,6 +67,7 @@ main {
 .signup-view {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 40px;
   padding-bottom: 44px;
@@ -233,4 +234,40 @@ main {
 
 .hidden {
   display: none;
+}
+
+picture {
+  display: contents;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: var(--color-blue-700);
+  }
+  main {
+    width: 608px;
+    padding: 40px;
+    background-color: var(--color-white);
+  }
+
+  .signup-view {
+    padding-bottom: 0px;
+
+    .header-img {
+      width: 528px;
+      height: 358px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .container .content .title {
+      font: var(--text-preset1);
+    }
+    .container .content .desc {
+      width: 528px;
+    }
+    .container .content li {
+      width: 528px;
+    }
+  }
 }

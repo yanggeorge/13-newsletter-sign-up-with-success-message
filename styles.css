@@ -62,6 +62,7 @@ main {
 .signup-view {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 40px;
   padding-bottom: 44px;
@@ -208,4 +209,38 @@ main {
 
 .hidden {
   display: none;
+}
+
+picture {
+  display: contents;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: var(--color-blue-700);
+  }
+  main {
+    width: 608px;
+    padding: 40px;
+    background-color: var(--color-white);
+  }
+  .signup-view {
+    padding-bottom: 0px;
+  }
+  .signup-view .header-img {
+    width: 528px;
+    height: 358px;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .signup-view .container .content .title {
+    font: var(--text-preset1);
+  }
+  .signup-view .container .content .desc {
+    width: 528px;
+  }
+  .signup-view .container .content li {
+    width: 528px;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -17,7 +17,11 @@
 <body>
   <main>
     <div class="signup-view">
-      <img class="header-img" src="/assets/images/illustration-sign-up-mobile.svg" alt="">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/assets/images/illustration-sign-up-tablet.svg">
+        <source media="(min-width: 1440px)" srcset="/assets/images/illustration-sign-up-desktop.svg">
+        <img class="header-img" src="/assets/images/illustration-sign-up-mobile.svg" alt="header-img">
+      </picture>
 
       <div class="container">
         <div class="content">
