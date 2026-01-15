@@ -48,6 +48,7 @@ body {
   display: flex;
   justify-content: center;
   /* 这个强制居中不要用 */
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -202,7 +203,7 @@ main {
   font: var(--text-preset2-bold);
 }
 .submit-success .dismiss {
-  width: 324px;
+  width: 100%;
   height: 56px;
   border-radius: 8px;
   background-color: var(--color-blue-800);
@@ -220,13 +221,11 @@ main {
     background-color: var(--color-blue-700);
   }
   main {
-    width: 608px;
-    padding: 40px;
     background-color: var(--color-white);
     border-radius: 38px;
   }
   .signup-view {
-    padding-bottom: 0px;
+    padding: 40px;
   }
   .signup-view .header-img {
     width: 528px;
@@ -243,5 +242,14 @@ main {
   }
   .signup-view .container .content li {
     width: 528px;
+  }
+  .submit-success {
+    height: auto;
+    width: 376px;
+    gap: 32px;
+    margin: 64px;
+  }
+  .submit-success .container .title {
+    font: var(--text-preset1);
   }
 }/*# sourceMappingURL=styles.css.map */
