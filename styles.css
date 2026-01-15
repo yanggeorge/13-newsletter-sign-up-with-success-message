@@ -212,7 +212,13 @@ main {
 }
 
 picture {
+  /* 1. 剥离 picture 的外壳，让内部元素直接参与 flex 布局 */
   display: contents;
+}
+
+picture source {
+  /* 2. 彻底隐藏 source 标签，防止它被 flex gap 误认为是“布局元素” */
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -223,6 +229,7 @@ picture {
     width: 608px;
     padding: 40px;
     background-color: var(--color-white);
+    border-radius: 38px;
   }
   .signup-view {
     padding-bottom: 0px;
