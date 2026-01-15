@@ -69,7 +69,10 @@ main {
 }
 .signup-view .header-img {
   width: 375px;
-  height: 284px;
+  height: auto;
+  display: block; /* <--- 加上这一行，消除底部的 4px 幽灵间距 */
+  -o-object-fit: cover;
+     object-fit: cover; /*<--- 防止强制宽高导致图片变形 */
 }
 .signup-view .container {
   display: flex;
@@ -211,16 +214,7 @@ main {
   display: none;
 }
 
-picture {
-  /* 1. 剥离 picture 的外壳，让内部元素直接参与 flex 布局 */
-  display: contents;
-}
-
-picture source {
-  /* 2. 彻底隐藏 source 标签，防止它被 flex gap 误认为是“布局元素” */
-  display: none;
-}
-
+/* 最佳实践写法 */
 @media screen and (min-width: 768px) {
   body {
     background-color: var(--color-blue-700);

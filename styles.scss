@@ -74,7 +74,9 @@ main {
 
   .header-img {
     width: 375px;
-    height: 284px;
+    height: auto;
+    display: block; /* <--- 加上这一行，消除底部的 4px 幽灵间距 */
+    object-fit: cover; /*<--- 防止强制宽高导致图片变形 */
   }
 
   .container {
@@ -236,15 +238,19 @@ main {
   display: none;
 }
 
-picture {
-  /* 1. 剥离 picture 的外壳，让内部元素直接参与 flex 布局 */
-  display: contents;
-}
+/* 最佳实践写法 */
+// .signup-view picture {
+//   /* 既然它是 flex item，就明确它的行为 */
+//   display: flex; /* 或者 block */
+//   justify-content: center;
+//   width: 100%; /* 确保它占满容器宽度 */
+// }
 
-picture source {
-  /* 2. 彻底隐藏 source 标签，防止它被 flex gap 误认为是“布局元素” */
-  display: none;
-}
+// .signup-view img {
+//   display: block; /* 消除 inline 间隙 */
+//   max-width: 100%; /* 响应式图片标配 */
+//   height: auto;
+// }
 
 @media screen and (min-width: 768px) {
   body {
