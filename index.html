@@ -16,10 +16,11 @@
 
 <body>
   <main>
-    <div class="signup-view hidden">
+    <div class="signup-view">
       <picture>
+        <!-- 顺序大的放上面 -->
+        <source media="(min-width: 1280px)" srcset="/assets/images/illustration-sign-up-desktop.svg">
         <source media="(min-width: 768px)" srcset="/assets/images/illustration-sign-up-tablet.svg">
-        <source media="(min-width: 1440px)" srcset="/assets/images/illustration-sign-up-desktop.svg">
         <img class="header-img" src="/assets/images/illustration-sign-up-mobile.svg" alt="header-img">
       </picture>
 
@@ -51,7 +52,7 @@
     </div>
 
 
-    <div class="submit-success">
+    <div class="submit-success hidden">
       <div class="container">
         <img src="/assets/images/icon-success.svg" alt="icon-success">
         <p class="title">Thanks for subscribing!</p>

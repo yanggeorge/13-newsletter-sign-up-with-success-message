@@ -267,9 +267,7 @@ main {
 
     .header-img {
       width: 528px;
-      height: 358px;
-      display: block;
-      object-fit: cover;
+      height: auto;
     }
 
     .container .content .title {
@@ -291,6 +289,26 @@ main {
 
     .container .title {
       font: var(--text-preset1);
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .signup-view {
+    flex-direction: row-reverse;
+    gap: 64px;
+    padding: 32px;
+
+    .header-img {
+      width: 400px;
+      height: auto;
+    }
+
+    .container .content .desc {
+      width: 376px;
+    }
+    .container .content li {
+      width: 376px;
     }
   }
 }

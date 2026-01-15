@@ -229,10 +229,7 @@ main {
   }
   .signup-view .header-img {
     width: 528px;
-    height: 358px;
-    display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: auto;
   }
   .signup-view .container .content .title {
     font: var(--text-preset1);
@@ -251,5 +248,22 @@ main {
   }
   .submit-success .container .title {
     font: var(--text-preset1);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .signup-view {
+    flex-direction: row-reverse;
+    gap: 64px;
+    padding: 32px;
+  }
+  .signup-view .header-img {
+    width: 400px;
+    height: auto;
+  }
+  .signup-view .container .content .desc {
+    width: 376px;
+  }
+  .signup-view .container .content li {
+    width: 376px;
   }
 }/*# sourceMappingURL=styles.css.map */
